@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Time tracking grid</title>
+
+  <!-- Font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Import CSS & JS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="main-container">
+    <div class="grid-container">
+      <div class="grid-child user-grid span-2">
+        <div class= "user-data">
+          <img class="profile-picture" src="./images/image-jeremy.png">
+          <span class="profile-label">Report for</span>
+          <h1 class="profile-name">Jeremy Robson</h1>
+        </div>
+
+        <div class="section-data user-schedule">
+          <span>Daily</span>
+          <span>Weekly</span>
+          <span>Monthly</span>
+        </div>
+      </div>
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-work.svg">
+        <div class="section-data">
+          <h3>Work</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">32 hrs</h2>
+          <span>Last Week - 36hrs</span>
+        </div>
+      </div>
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-play.svg">
+        <div class="section-data">
+          <h3>Play</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">10 hrs</h2>
+          <span>Last Week - 8hrs</span>
+        </div>
+      </div>
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-study.svg">
+        <div class="section-data">
+          <h3>Study</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">4 hrs</h2>
+          <span>Last Week - 7hrs</span>
+        </div>
+      </div>
+      
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-exercise.svg">
+        <div class="section-data">
+          <h3>Exercise</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">4 hrs</h2>
+          <span>Last Week - 5hrs</span>
+        </div>
+      </div>
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-social.svg">
+        <div class="section-data">
+          <h3>Social</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">5 hrs</h2>
+          <span>Last Week - 10hrs</span>
+        </div>
+      </div>
+
+      <div class="grid-child">
+        <img class="grid-child-header work" src="./images/icon-self-care.svg">
+        <div class="section-data">
+          <h3>Self Care</h3>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+          <h2 class="grid-child-time">2 hrs</h2>
+          <span>Last Week - 2hrs</span>
+        </div>
+      </div>
+      </div>
+  </main>
+</body>
+</html>
