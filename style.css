@@ -15,6 +15,11 @@
     --neutral-800: hsl(236, 100%, 87%);
 
     --fs-regular: 1.125rem;
+    --fs-title: 3rem;
+
+    --fs-schedule-mob: 2rem;
+    --fs-regular-mob: 1.5rem;
+    --fs-title-mob: 2.5rem;
 
     --ff-regular: font-family: 'Rubik', sans-serif;
 
@@ -102,7 +107,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-size: var(--fs-regular);
+    font-size: var(--fs-regular-mob);
     font-family: var(--ff-regular);
     background-color: var(--neutral-100);
     color: var(--neutral-800);
@@ -120,17 +125,103 @@ body {
 }
 
 .grid-child {
-    border: 2px solid var(--neutral-800);
+    /* border: 2px solid var(--neutral-800); */
+    border-radius: 2rem;
+    background-color: var(--neutral-200);
+}
+
+.user-grid {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.user-schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: var(--fs-schedule-mob);
+}
+
+.user-schedule a {
+    text-decoration: none;
+    color: var(--neutral-600);
+}
+
+.user-schedule a:hover {
+    color: var(--neutral-800);
+}
+
+.section-data {
+    background-color: var(--neutral-200);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     padding: 2rem;
 }
 
+.grid-child-header {
+    border-radius: inherit;
+    padding: 2rem;
+}
+
+.user {
+    background-color: var(--primary-400);
+}
+
+.user-header h1 {
+    font-size: var(--fs-title-mob);
+    font-weight: var(--fw-regular);
+    color: white;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-header img {
+    width: 128px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+
+
 
 /* Desktop view */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 45em) {
+
+    body {
+        font-size: var(--fs-regular);
+    }
 
     .grid-container {
         grid-template-columns: repeat(4,1fr);
 
+    }
+
+    .user-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .user-header img{
+        align-self: flex-start;
+    }
+
+    .user-header h1 {
+        font-size: var(--fs-title);
+    }
+
+    .user-schedule {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: var(--fs-regular);
     }
 
 
