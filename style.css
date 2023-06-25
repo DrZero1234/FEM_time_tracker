@@ -28,6 +28,10 @@
     --fw-bold: 500;
 
 
+    --padding-desktop: 2rem;
+    --padding-mobile: 1.5rem
+
+
 }
 
 
@@ -126,20 +130,23 @@ body {
 
 .grid-child {
     /* border: 2px solid var(--neutral-800); */
+    display: grid;
+    grid-template-rows: 1fr 2fr;
     border-radius: 2rem;
     background-color: var(--neutral-200);
 }
 
 .user-grid {
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1fr !important
 }
 
 .user-schedule {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     justify-content: space-between;
     font-size: var(--fs-schedule-mob);
+    list-style-type: none;
 }
 
 .user-schedule a {
@@ -151,16 +158,44 @@ body {
     color: var(--neutral-800);
 }
 
+.grid-child-header,
 .section-data {
+    padding: var(--padding-mobile);
+}
+
+.section-title {
+    grid-area: title;
+}
+
+.section-ellips {
+    justify-items: end;
+    grid-area: icon;
+
+}
+
+.section-time {
+    grid-area: time;
+}
+
+.section-label {
+    justify-self: end;
+    grid-area: last-time;
+}
+
+.section-data {
+    display: grid;
+    grid-template-areas: 
+    "title icon"
+    "time last-time";
     background-color: var(--neutral-200);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    padding: 2rem;
+    align-items: center;
 }
 
 .grid-child-header {
-    border-radius: inherit;
-    padding: 2rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
 }
 
 .user {
@@ -177,6 +212,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    border-radius: 2rem !important;
 }
 
 .user-header img {
@@ -190,9 +226,45 @@ body {
 
 
 
+/* Background colors */
+.work,
+.play,
+.study,
+.exercise,
+.self-care,
+.social {
+    opacity: .75;
+}
+
+.work {
+    background-color: var(--primary-600);
+
+}
+
+.play {
+    background-color: var(--primary-450);
+}
+
+.study {
+    background-color: var(--primary-550);
+}
+
+.exercise {
+    background-color: var(--primary-300);
+}
+
+.social {
+    background-color: var(--primary-350);
+}
+
+.self-care {
+    background-color: var(--primary-500);
+}
+
+
 
 /* Desktop view */
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 55em) {
 
     body {
         font-size: var(--fs-regular);
@@ -222,6 +294,22 @@ body {
         flex-direction: column;
         gap: 1.5rem;
         font-size: var(--fs-regular);
+    }
+
+    .grid-child-header,
+    .section-data {
+        padding: var(--padding-desktop);
+    }
+
+    .section-label {
+        justify-self: start;
+    }
+
+    .section-data {
+        grid-template-areas: 
+        "title icon"
+        "time time"
+        "last-time last-time";
     }
 
 
