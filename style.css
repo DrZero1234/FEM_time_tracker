@@ -22,7 +22,7 @@
     --fs-schedule: 2rem;
 
     --fs-regular-mob: 1.125rem;
-    --fs-title-mob: 1.75rem;
+    --fs-title-mob: 2rem;
     --fs-time-mob: 3rem;
 
     --ff-regular: 'Rubik', sans-serif;
@@ -128,18 +128,20 @@ body {
     display: grid;
     min-height: 100vh;
     place-content: center;
+    margin: 2rem;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
     gap: 1.5rem;
 }
 
 .grid-child {
     /* border: 2px solid var(--neutral-800); */
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
     border-radius: 2rem;
     background-color: var(--neutral-200);
     overflow: hidden;
@@ -158,13 +160,19 @@ body {
     list-style-type: none;
 }
 
-.user-schedule a {
+.schedule-option {
     text-decoration: none;
     color: var(--neutral-600);
 }
 
-.user-schedule a:hover {
+
+.schedule-option:hover {
+    cursor: pointer;
     color: var(--neutral-800);
+}
+
+.schedule-option.active {
+    color: hsl(0, 0%, 85%)
 }
 
 .section-data {
@@ -217,8 +225,6 @@ body {
     "title icon"
     "time last-time";
     background-color: var(--neutral-200);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
     align-items: center;
 }
 
@@ -232,6 +238,7 @@ body {
     font-size: var(--fs-title-mob);
     font-weight: var(--fw-regular);
     color: white;
+    
 }
 
 .user-header {
@@ -240,6 +247,7 @@ body {
     gap: 1.5rem;
     border-radius: 2rem !important;
     padding: var(--padding-mobile);
+    overflow-wrap: break-word;
 }
 
 .user-header img {
@@ -304,17 +312,20 @@ h2 {
 
 
 /* Desktop view */
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
 
     body {
         font-size: var(--fs-regular);
+    }
+
+    .main-container {
+        margin: 5rem;
     }
 
     .grid-container {
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 2.5rem;
-
     }
 
     .user-grid {
@@ -348,6 +359,7 @@ h2 {
 
     .section-data {
         padding: var(--padding-desktop);
+        max-height: none;
     }
 
 

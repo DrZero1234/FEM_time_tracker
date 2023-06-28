@@ -29,13 +29,13 @@
           </div>
         </div>
         <ul class="section-data user-schedule">
-          <li><a href="#">Daily</a></li>
-          <li><a href="#">Weekly</a></li>
-          <li><a href="#">Monthly</a></li>
+          <li class="schedule-option" id="sched-opt-d" data-json_key="daily">Daily</li>
+          <li class="schedule-option active"id="sched-opt-w" data-json_key="weekly">Weekly</li>
+          <li class="schedule-option"id="sched-opt-m" data-json_key="monthly">Monthly</li>
         </ul>
       </div>
 
-      <div class="grid-child">
+      <div class="grid-child" id="work">
         <div class="grid-child-header work">
           <img src="./images/icon-work.svg">
         </div>
@@ -48,12 +48,12 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">32 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">36hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">32</span> hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type">Week</span> - <span id="section-last-time">36</span>hrs</span>
         </div>
       </div>
 
-      <div class="grid-child">
+      <div class="grid-child" id="play">
         <div class="grid-child-header play">
           <img src="./images/icon-play.svg">
         </div>
@@ -66,12 +66,12 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">10 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">8hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">10</span> hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type">Week</span> - <span id="section-last-time">8</span>hrs</span>
         </div>
       </div>
 
-      <div class="grid-child">
+      <div class="grid-child" id="study">
         <div class="grid-child-header study">
           <img  src="./images/icon-study.svg">
         </div>
@@ -84,13 +84,13 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">4 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">7hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">4</span> hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type">Week</span> - <span id="section-last-time">7</span>hrs</span>
         </div>
       </div>
       
 
-      <div class="grid-child">
+      <div class="grid-child" id="exercise">
         <div  class="grid-child-header exercise">
           <img src="./images/icon-exercise.svg">
         </div>
@@ -103,12 +103,12 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">4 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">7 hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">4</span>hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type"> Week </span> - <span id="section-last-time">7</span>hrs</span>
         </div>
       </div>
 
-      <div class="grid-child">
+      <div class="grid-child" id="social">
         <div class="grid-child-header social">
           <img src="./images/icon-social.svg">
         </div>
@@ -121,12 +121,12 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">4 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">7 hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">10</span> hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type"> Week </span> - <span id="section-last-time">7</span>hrs</span>
         </div>
       </div>
 
-      <div class="grid-child">
+      <div class="grid-child" id="self care">
         <div class="grid-child-header self-care">
           <img src="./images/icon-self-care.svg">
         </div>
@@ -139,8 +139,8 @@
                 fill="#BBC0FF" fill-rule="evenodd" />
             </svg>
           </div>
-          <h2 class="section-time">2 hrs</h2>
-          <span class="section-label">Last Week - <span id="section-last-time">2hrs</span></span>
+          <h2 class="section-time"><span id="section-hours">2</span> hrs</h2>
+          <span class="section-label">Last <span id="timeframe-type">Week</span> - <span id="section-last-time">2</span>hrs</span>
         </div>
       </div>
       </div>
