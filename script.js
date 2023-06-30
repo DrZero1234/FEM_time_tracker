@@ -17,21 +17,16 @@ const toggle_active = (e) => {
     }
 }
 
-const changeDom = (timeframe_type) => {
+const changeDom = async (timeframe_type) => {
+    try {
+        const key = await timeframe_type;
+        const fetch_data = await fetch("./data.json");
+        const json = await fetch_data.json();
 
-}
-
-const handleClick = e => {
-    const {currentTarget} = e
-    const json_key = currentTarget.dataset.json_key.toString()
-    fetch("./data.json")
-    .then((response) => response.json())
-    .then((category_data) => 
-        category_data.forEach((data) => {
-
-            const timeframe_data = data.timeframes[json_key]
+        json.forEach((data) => {
+            const timeframe_data = data.timeframes[key]
             let timeframe_text
-            switch (json_key) {
+            switch (key) {
                 case "monthly":
                     timeframe_text = "Month"
                     break;
@@ -55,10 +50,17 @@ const handleClick = e => {
             last_time.textContent = timeframe_data.previous
             timeframe_type.textContent = timeframe_text
         })
-    )
+    } catch (error) {
+        console.error(error)    
+    }
+}
+
+const handleClick = e => {
+    const {currentTarget} = e
+    const json_key = currentTarget.dataset.json_key.toString()
+    changeDom(json_key)
     //console.log(json_key)
    toggle_active(currentTarget);
-
 }
 
 [sched_day,sched_month,sched_week].forEach((elem) => (
@@ -66,6 +68,8 @@ const handleClick = e => {
         handleClick(e)
     })
 ))
+
+changeDom("weekly")
 
 /*
 fetch("./data.json")

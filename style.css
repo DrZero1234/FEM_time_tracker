@@ -143,7 +143,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 3fr;
     border-radius: 2rem;
-    background-color: var(--neutral-200);
+    border: none;
     overflow: hidden;
 }
 
@@ -178,6 +178,8 @@ body {
 .section-data {
     padding: var(--padding-mobile);
     z-index: 100;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
 }
 
 .grid-child-header {
@@ -191,10 +193,7 @@ body {
     margin-right: var(--margin--img-mob);
 }
 
-.grid-child-header {
-    border-top-right-radius: 2rem;
-    border-top-left-radius: 2rem;
-}
+
 
 .section-title {
     grid-area: title;
