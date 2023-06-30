@@ -131,6 +131,7 @@ body {
     margin: 2rem;
 }
 
+/* Mobile grid  */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -143,7 +144,6 @@ body {
     display: grid;
     grid-template-rows: 1fr 3fr;
     border-radius: 2rem;
-    border: none;
     overflow: hidden;
 }
 
@@ -152,6 +152,8 @@ body {
     grid-template-rows: 3fr 1fr !important;
 }
 
+
+/* Clickable time texts */
 .user-schedule {
     display: flex !important;
     flex-direction: row;
@@ -207,6 +209,11 @@ body {
     scale: 1.5;
 }
 
+.section-ellipsis:hover {
+    cursor: pointer;
+    filter: brightness(3.5);
+}
+
 .section-time {
     grid-area: time;
     font-size: var(--fs-time-mob);
@@ -225,6 +232,11 @@ body {
     "time last-time";
     background-color: var(--neutral-200);
     align-items: center;
+}
+
+.section-data:not(.user-schedule):hover {
+    cursor: pointer;
+    filter: brightness(1.5);
 }
 
 

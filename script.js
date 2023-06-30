@@ -1,3 +1,5 @@
+// Clickable text in user profile tab
+
 const sched_day = document.getElementById("sched-opt-d");
 const sched_week = document.getElementById("sched-opt-w");
 const sched_month = document.getElementById("sched-opt-m");
@@ -5,7 +7,7 @@ const sched_month = document.getElementById("sched-opt-m");
 const schedule_wrapper = document.querySelector(".user-schedule");
 
 
-
+// Sets the schedule options style depending which one is active
 
 const toggle_active = (e) => {
     const active = schedule_wrapper.querySelector(".active");
@@ -17,6 +19,8 @@ const toggle_active = (e) => {
     }
 }
 
+// Changes the schedule data based on the data.json file
+
 const changeDom = async (timeframe_type) => {
     try {
         const key = await timeframe_type;
@@ -25,6 +29,7 @@ const changeDom = async (timeframe_type) => {
 
         json.forEach((data) => {
             const timeframe_data = data.timeframes[key]
+
             let timeframe_text
             switch (key) {
                 case "monthly":
@@ -69,21 +74,6 @@ const handleClick = e => {
     })
 ))
 
+
+// Gets weekly data by default
 changeDom("weekly")
-
-/*
-fetch("./data.json")
-    .then((response) => response.json())
-    .then((category_data) => 
-        category_data.forEach((data) => {
-            const parent_div = document.getElementById(data.title.toLowerCase());
-            console.log(parent_div)
-            const hours_num = parent_div.querySelector("#section-hours");
-            console.log(hours_num)
-
-            const time = parent_div.querySelector(".section-time");
-
-        })
-    )
-
-*/
